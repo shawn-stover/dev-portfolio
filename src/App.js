@@ -1,7 +1,10 @@
+// Imports
 import React from 'react'
 import './App.css'
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl'
+import Routes from './components/Routes.jsx'
 
+// App template using react-mdl
 export default function App() {
   return(
     <div className="demo-big-content">
@@ -24,6 +27,7 @@ export default function App() {
             </Drawer>
             <Content>
                 <div className="page-content" />
+                <Routes />
             </Content>
         </Layout>
     </div>
