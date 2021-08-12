@@ -1,18 +1,19 @@
 // Imports
-import { React, Component } from 'react'
+import { React, useState } from 'react'
 import { Tab , Tabs, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 // Projects Component
-export default class Projects extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { activeTab: 0 }
+export default function Projects() {
+    const [activeTab, setActiveTab] = useState(0)
+    
+    const handleChange = activeTab => {
+        setActiveTab(activeTab)
     }
-        
-    toggleCategories() {
-        if(this.state.activeTab === 0) {
+
+    const toggleCategories = () => {
+        if(activeTab === 0) {
             return(
                 <div className='projects-grid'>
                     <Card className='card' shadow={5}>
@@ -34,7 +35,7 @@ export default class Projects extends Component {
                     </Card>
                 </div>    
             ) 
-        } else if(this.state.activeTab === 1) {
+        } else if(activeTab === 1) {
             return(
                 <div className='projects-grid'>
                     <Card className='card' shadow={5}>
@@ -56,7 +57,7 @@ export default class Projects extends Component {
                     </Card>
                 </div>
             ) 
-        } else if(this.state.activeTab === 2) {
+        } else if(activeTab === 2) {
             return(
                 <div className='projects-grid'>
                     <Card className='card' shadow={5}>
@@ -118,26 +119,24 @@ export default class Projects extends Component {
         }     
     }
 
-    render() {
-        return(
-            <div className='category-tabs'>
-                <Helmet>
-                    <title>Shawn's Portfolio | Projects</title>
-                </Helmet>
-                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-                    <Tab>Javascript</Tab>
-                    <Tab>EJS</Tab>
-                    <Tab>MERN</Tab>
-                    <Tab>Python</Tab>
-                </Tabs>
-                <Grid classname='projects-grid'>
-                    <Cell col={12}>
-                        <div className='content'>
-                            {this.toggleCategories()}
-                        </div> 
-                    </Cell>
-                </Grid>
-            </div>
-        )
-    }                
-}
+    return(
+        <div className='category-tabs'>
+            <Helmet>
+                <title>Shawn's Portfolio | Projects</title>
+            </Helmet>
+            <Tabs onChange={handleChange} ripple>
+                <Tab>Javascript</Tab>
+                <Tab>EJS</Tab>
+                <Tab>MERN</Tab>
+                <Tab>Python</Tab>
+            </Tabs>
+            <Grid classname='projects-grid'>
+                <Cell col={12}>
+                    <div className='content'>
+                        {toggleCategories()}
+                    </div> 
+                </Cell>
+            </Grid>
+        </div>
+    )
+}                
