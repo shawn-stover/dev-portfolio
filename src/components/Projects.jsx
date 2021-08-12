@@ -1,5 +1,5 @@
 // Imports
-import { React, useState } from 'react'
+import { useState } from 'react'
 import { Tab , Tabs, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'

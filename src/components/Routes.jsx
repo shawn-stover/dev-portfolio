@@ -1,5 +1,4 @@
 // Imports
-import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Landing from './Landing.jsx'
 import About from './About.jsx'

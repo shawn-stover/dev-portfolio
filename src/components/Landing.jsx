@@ -1,5 +1,4 @@
 // Imports
-import React from 'react'
 import { Grid, Cell } from 'react-mdl'
 import { Helmet } from 'react-helmet'
 
