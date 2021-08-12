@@ -45,7 +45,7 @@ export default function Contact() {
                                     </ListItemContent>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemContent style={{fontSize: '4.75vh', fontFamily: 'Anton'}}>
+                                    <ListItemContent style={{fontSize: '4.75vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
                                         <i className='fab fa-slack' aria-hidden='true' />
                                         shawn.stover.it.cs@gmail.com
                                     </ListItemContent>
