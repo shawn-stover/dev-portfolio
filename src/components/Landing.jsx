@@ -9,10 +9,10 @@ export default function Landing() {
             <Helmet>
                 <title>Shawn's Portfolio | Welcome</title>
             </Helmet>
-            <Grid className='landing-grid'>
+            <Grid className='landing-grid' style={{overflow: 'auto'}}>
                 {/* Single Column for page width */}
                 <Cell col={12}>
-                    <img className='avatar'
+                    <img className='avatar-landing'
                         src='/img/ShawnPic.png'
                         alt='Shawn'
                     />
@@ -20,6 +20,10 @@ export default function Landing() {
                         <h1>Backend Dev Ready to Make an Impact</h1>
                         <hr/>
                         <p>HTML/CSS | React | Python | MongoDb | PostgresSQL | NodeJs | Typescript | EJS</p>
+                        <a className='resume-link' href='/resume/Shawn_Design_Resume.pdf' style={{textDecoration: 'none'}}download>
+                            <i className='fas fa-file' aria-hidden='true' />
+                            <p>Download My Resume</p>
+                        </a>
                         <div className='social-links'>
                             {/* CodePen */}
                             <a href='http://www.codepen.io/Shawn-Stover' rel='noopener noreferrer' target='_blank'>

@@ -10,9 +10,9 @@ export default function Contact() {
                 <title>Shawn's Portfolio | Contact</title>
             </Helmet>
             <div className='contact-body'>
-                <Grid className='contact-grid'>
+                <Grid className='contact-grid' style={{overflow: 'auto'}}>
                     <Cell col={6}>
-                        <img className='avatar'
+                        <img className='avatar-contact'
                             src='./img/ShawnPic.png'
                             alt='Shawn' 
                         />
@@ -27,25 +27,25 @@ export default function Contact() {
                         <div className='contact-list'>
                             <List>
                                 <ListItem>
-                                    <ListItemContent style={{fontSize: '4.75vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
+                                    <ListItemContent style={{fontSize: '3.25vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
                                         <i className='fas fa-phone-square' aria-hidden='true' />
                                         (951) 880-5982
                                     </ListItemContent>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemContent style={{fontSize: '4.75vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
+                                    <ListItemContent style={{fontSize: '3.25vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
                                         <i className='fas fa-fax' aria-hidden='true' />
                                         (951) 845-2865
                                     </ListItemContent>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemContent style={{fontSize: '4.75vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
+                                    <ListItemContent style={{fontSize: '3.25vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
                                         <i className='fas fa-envelope' aria-hidden='true' />
                                         shawn.stover.it.cs@gmail.com
                                     </ListItemContent>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemContent style={{fontSize: '4.75vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
+                                    <ListItemContent style={{fontSize: '3.25vh', fontFamily: 'Anton', color: '#FFFFFF'}}>
                                         <i className='fab fa-slack' aria-hidden='true' />
                                         shawn.stover.it.cs@gmail.com
                                     </ListItemContent>

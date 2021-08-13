@@ -15,8 +15,8 @@ export default function Projects() {
     const toggleCategories = () => {
         if(activeTab === 0) {
             return(
-                <div className='projects-grid'>
-                    <Card className='card' shadow={5}>
+                <div className='projects-grid' style={{height: '100%'}}>
+                    <Card className='card' shadow={5} style={{margin: 'auto'}}>
                         <CardTitle style={{color: '#000000', height: '33vh', background: 'url(https://media.giphy.com/media/HroASiJhtF9ZrZ7kYI/giphy.gif) center / cover'}}>Survival Chess</CardTitle>
                         <CardText>
                             Survival Chess used HTML / CSS and Javascript. It is chess with a twist. It is written in Javascript and uses the chessboard.js and chess.js libraries to control basic game logic and functions. The player plays against never ending computers and their board state is preserved between games until they lose.
@@ -61,7 +61,7 @@ export default function Projects() {
                     <Card className='card' shadow={5}>
                         <CardTitle style={{color: '#000000', height: '33vh', background: 'url(https://media.giphy.com/media/MvdNxKTCzTLv7O9wOh/giphy.gif) center / cover'}}>Falendar</CardTitle>
                         <CardText>
-                            Falendar was written as a MERN Stack collaboration project not only as a group of four students from my class, but a pair of UX/UI Designers from another class as well. The app was written as a way for families to begin to plan their lives back out again post pandemic and allow them to make their scheduling easier.
+                            Falendar was written as a MERN Stack collaboration project not only as a group of four students from my class, but a pair of UX/UI Designers from another class as well. The app was written as a way for families to begin to plan their lives back out again post pandemic and allow them to make their scheduling easier. This allows families to get back in the habit of scheduling.
                         </CardText>
                         <CardActions border>
                             <Button colored>
@@ -78,7 +78,7 @@ export default function Projects() {
                     <Card className='card' shadow={5}>
                         <CardTitle style={{color: '#000000', height: '33vh', background: 'url(https://media.giphy.com/media/KNy3Z6MmzaDk9hnjyL/giphy.gif'}}>Final Fantasy 14 Note App Refactor</CardTitle>
                         <CardText>
-                            This was my final project during my bootcamp. In this project, I took the ap written in EJS, NodeJs and SQL and have refactored it into a MERN stack app controlled by a backend Mongo database that serves a frontend React client for users. This app includes authentication that the EJS app did not, and a much better looking website and file structure.
+                            This was my final project during my bootcamp. In this project, I took the app written in EJS, NodeJs and SQL and have refactored it into a MERN stack app controlled by a backend Mongo database that serves a frontend React client for users. This app includes authentication that the EJS app did not, and a much better looking website and file structure.
                         </CardText>
                         <CardActions border>
                             <Button colored>
@@ -120,12 +120,12 @@ export default function Projects() {
                 <title>Shawn's Portfolio | Projects</title>
             </Helmet>
             <Tabs onChange={handleChange} ripple>
-                <Tab>Javascript</Tab>
-                <Tab>EJS</Tab>
-                <Tab>MERN</Tab>
-                <Tab>Python</Tab>
+                    <Tab>Javascript</Tab>
+                    <Tab>EJS</Tab>
+                    <Tab>MERN</Tab>
+                    <Tab>Python</Tab>   
             </Tabs>
-            <Grid >
+            <Grid className='grid' style={{overflow: 'auto'}}>
                 <Cell col={12}>
                     <div className='content'>
                         {toggleCategories()}

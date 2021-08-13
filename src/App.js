@@ -13,7 +13,6 @@ export default function App() {
               <Navigation>
                   <Link to='/' target='_blank'>Home</Link>
                   <Link to='/about' target='_blank'>About Me</Link>
-                  <Link to='/resume' target='_blank'>Resume</Link>
                   <Link to='/projects' target='_blank'>Projects</Link>
                   <Link to='/contact' target='_blank'>Contact</Link>
               </Navigation>
@@ -22,7 +21,6 @@ export default function App() {
                 <Navigation>
                   <Link to='/' target='_blank'>Home</Link>
                   <Link to='/about' target='_blank'>About Me</Link>
-                  <Link to='/resume' target='_blank'>Resume</Link>
                   <Link to='/projects' target='_blank'>Projects</Link>
                   <Link to='/contact' target='_blank'>Contact</Link>
                 </Navigation>
