@@ -1,8 +1,14 @@
 // Imports
 import './App.css'
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl'
+import dotenv from './env'
+import RouteChangeTracker from './components/RouteChangeTracker.jsx'
 import Routes from './components/Routes.jsx'
+import ReactGA from 'react-ga' 
 import { Link } from 'react-router-dom'
+
+const TRACKING = process.env.REACT_APP_TRACKING_ID
+ReactGA.initialize(TRACKING)
 
 // App template using react-mdl
 export default function App() {
@@ -30,6 +36,7 @@ export default function App() {
                 <Routes />
             </Content>
         </Layout>
+        <RouteChangeTracker />
     </div>
   )
 }
